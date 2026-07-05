@@ -5,10 +5,10 @@ A 3-tier task management app (frontend / backend API / Postgres) — forked from
 containerized, deployed to AWS EKS via Kubernetes, and built/deployed through a
 Jenkins CI/CD pipeline triggered by GitHub webhooks.
 
-See [CHANGES.md](./CHANGES.md) for a full list of deviations from the original
-source and the reasoning behind each one (notably: the frontend now proxies
-`/api/*` server-side so only it needs public exposure, and a real bug in the
-backend's DB pool error handling was fixed).
+See [CHANGES.md](./CHANGES.md) for a simple explanation of every change made
+to the original app and why (in short: the frontend now forwards API
+requests to the backend so the backend can stay private, and a crash bug in
+the backend was fixed).
 
 ## Architecture
 
