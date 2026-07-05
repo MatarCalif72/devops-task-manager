@@ -14,6 +14,10 @@ const pool = new Pool({
     port: process.env.DB_PORT || 5432,
 });
 
+pool.on('error', (err) => {
+    console.error('Unexpected error on idle DB client:', err.message);
+});
+
 
 
 // הוספת משימה
